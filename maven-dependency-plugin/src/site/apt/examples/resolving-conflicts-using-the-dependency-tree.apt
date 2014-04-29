@@ -53,3 +53,9 @@ mvn dependency:tree -Dverbose -Dincludes=commons-collections
 
   More specifically, in verbose mode the dependency tree shows dependencies that were omitted for: being a duplicate
   of another; conflicting with another's version and/or scope; and introducing a cycle into the dependency tree.
+
+  In Maven 3.0+ it is more efficient and robust to use this command instead since it doesn't try to download jar files:
+
++---+
+mvn dependency:collect-tree -Dverbose -Dincludes=commons-collections
++---+
